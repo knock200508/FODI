@@ -1534,7 +1534,29 @@
         }
       });
     </script>
+    
+    <!-- Link Gitalk的支持文件 -->
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    var gitalk = new Gitalk({
+        clientID: '96abf14a903d7faaba3b', // clientID 
+        clientSecret: '21344c75495661c51c75ef7bae2d5e1ef7cf5a22', // clientSecret
+        repo: 'gitalk-comments', // 评论仓库名
+        owner: 'knock200508',
+        admin: ['knock200508'], // 管理人
+        proxy: 'https://cors-server-ecru.vercel.app/github_access_token', // GitHub oauth 请求到反向代理
+        id: location.pathname, // 返回当前 URL 的路径部分作为id
+        language:'zh-CN', // 语言
+        distractionFreeMode: false  // 无干扰模式
+    });
+    gitalk.render('gitalk-container');
+    </script>
+    <!-- Gitalk end -->
+
   </head>
+  
+  
   <body>
     <template id="tree-node-wrapper-template">
       <div class="tree-node-wrapper">
@@ -1601,27 +1623,8 @@
             <div id="readme"></div>
             
              <!-- Link Gitalk的支持文件 -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<div id="gitalk-container"></div>
-    <script>
-var gitalk = new Gitalk({
-    clientID: '96abf14a903d7faaba3b', // clientID 
-    clientSecret: '21344c75495661c51c75ef7bae2d5e1ef7cf5a22', // clientSecret
-    repo: 'gitalk-comments', // 评论仓库名
-    owner: 'knock200508',
-    admin: ['knock200508'], // 管理人
-    proxy: 'https://cors-server-ecru.vercel.app/github_access_token', // GitHub oauth 请求到反向代理
-    id: location.pathname, // 返回当前 URL 的路径部分作为id
-    language:'zh-CN', // 语言
-    distractionFreeMode: false  // 无干扰模式
-});
-gitalk.render('gitalk-container');
-</script>
-<!-- Gitalk end -->
-            
-            
-            
+            <div id="gitalk-container"></div>
+            <!-- Gitalk end -->
             
           </div>
           <div class="preview">
