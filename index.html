@@ -1534,27 +1534,7 @@
         }
       });
     </script>
-    <!-- Link Gitalk的支持文件 -->
-    <link href="https://unpkg.com/gitalk/dist/gitalk.css" rel="stylesheet" >
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-    var gitalk = new Gitalk({
-        clientID: '68296066f59c62241bae', // clientID 
-        clientSecret: 'd81446faf8f44d8c917f81139dacf51de85ecaa9', // clientSecret
-        repo: 'gitalk-comments', // 评论仓库名
-        owner: 'knock200508',
-        admin: ['knock200508'], // 管理人
-        proxy: 'https://cors-server-ecru.vercel.app/github_access_token', // GitHub oauth 请求到反向代理
-        id: location.pathname, // 返回当前 URL 的路径部分作为id
-        language:'zh-CN', // 语言
-        distractionFreeMode: false  // 无干扰模式
-    });
-    gitalk.render('gitalk-container');
-    </script>
-
   </head>
-  
-  
   <body>
     <template id="tree-node-wrapper-template">
       <div class="tree-node-wrapper">
@@ -1619,7 +1599,6 @@
           <div id="file-list"></div>
           <div class="markdown-body">
             <div id="readme"></div>
-            <div id="gitalk-container"></div>
           </div>
           <div class="preview">
             <div class="info">
@@ -1639,6 +1618,5 @@
         </div>
       </div>
     </div>
-   
   </body>
 </html>
